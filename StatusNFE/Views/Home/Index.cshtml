@@ -1,0 +1,185 @@
+﻿@model List<StatusNFE.Models.StatusNfe>
+@{
+    ViewBag.Title = "Home Page";
+
+
+
+    //Status Cardiesel
+
+    string NomeCasaCar = string.Empty;
+    string statusNFECar = "label label-danger";
+    string statusNFSECar = "label label-danger";
+    string statusIntegradorCar = "label label-danger";
+    string statusTimerCar = "label label-danger";
+    string statusEdiCar = "label label-danger";
+
+    //Status AutoSete
+
+    string NomeCasaAut = string.Empty;
+    string statusNFEAut = "label label-danger";
+    string statusNFSEAut = "label label-danger";
+    string statusIntegradorAut = "label label-danger";
+    string statusTimerAut = "label label-danger";
+    string statusEdiAut = "label label-danger";
+
+    //Status Calisto
+
+    string NomeCasaCal = string.Empty;
+    string statusNFECal = "label label-danger";
+    string statusNFSECal = "label label-danger";
+    string statusIntegradorCal = "label label-danger";
+    string statusTimerCal = "label label-danger";
+    string statusEdiCal = "label label-danger";
+
+    foreach (var item in Model)
+    {
+        if (item.Casa == "cardiesel")
+        {
+            NomeCasaCar = item.Casa;
+
+            if (item.Nfe)
+            {
+                statusNFECar = "label label-success";
+            }
+
+            if (item.Nfse)
+            {
+                statusNFSECar = "label label-success";
+            }
+
+            if (item.Integracao)
+            {
+                statusIntegradorCar = "label label-success";
+            }
+
+            if (item.Timer)
+            {
+                statusTimerCar = "label label-success";
+            }
+
+            if (item.Edi)
+            {
+                statusEdiCar = "label label-success";
+            }
+        }
+
+        if (item.Casa == "autosete")
+        {
+            NomeCasaAut = item.Casa;
+
+            if (item.Nfe)
+            {
+                statusNFEAut = "label label-success";
+            }
+
+            if (item.Nfse)
+            {
+                statusNFSEAut = "label label-success";
+            }
+
+            if (item.Integracao)
+            {
+                statusIntegradorAut = "label label-success";
+            }
+
+            if (item.Timer)
+            {
+                statusTimerAut = "label label-success";
+            }
+
+            if (item.Edi)
+            {
+                statusEdiAut = "label label-success";
+            }
+        }
+
+        if (item.Casa == "calisto")
+        {
+            NomeCasaCal = item.Casa;
+
+            if (item.Nfe)
+            {
+                statusNFECal = "label label-success";
+            }
+
+            if (item.Nfse)
+            {
+                statusNFSECal = "label label-success";
+            }
+
+            if (item.Integracao)
+            {
+                statusIntegradorCal = "label label-success";
+            }
+
+            if (item.Timer)
+            {
+                statusTimerCal = "label label-success";
+            }
+
+            if (item.Edi)
+            {
+                statusEdiCal = "label label-success";
+            }
+        }
+    }
+}
+
+<br />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">@NomeCasaAut.ToUpper()</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="@statusNFEAut">NFE</span>
+                        <span class="@statusNFSEAut">NFSE</span>
+                        <span class="@statusIntegradorAut">INTEGRADOR</span>
+                        <span class="@statusTimerAut">TIMER</span>
+                        <span class="@statusEdiAut">EDI</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">@NomeCasaCal.ToUpper()</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="@statusNFECal">NFE</span>
+                        <span class="@statusNFSECal">NFSE</span>
+                        <span class="@statusIntegradorCal">INTEGRADOR</span>
+                        <span class="@statusTimerCal">TIMER</span>
+                        <span class="@statusEdiCal">EDI</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">@NomeCasaCar.ToUpper()</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="@statusNFECar">NFE</span>
+                        <span class="@statusNFSECar">NFSE</span>
+                        <span class="@statusIntegradorCar">INTEGRADOR</span>
+                        <span class="@statusTimerCar">TIMER</span>
+                        <span class="@statusEdiCar">EDI</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
